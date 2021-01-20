@@ -1,0 +1,52 @@
+html{
+    box-sizing: border-box;
+}
+body{
+    box-sizing: inherit;
+    background-color: #1F2020;
+    color: #fff;
+    font-family: OpenSans;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.line{
+    position: relative;
+    opacity: 0;
+    animation: grow 2s forwards;
+    animation-delay: .9s;
+}
+.line::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background: rgb(255,255,255);
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(79,77,77,1) 50%, rgba(70,70,70,1) 100%); 
+}
+.line::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border: 7px solid transparent; border-bottom: 7px solid #fff; border-left: 7px solid #fff; 
+}
+
+@keyframes grow{0%{width:0}100%{opacity:1;width:100%}}

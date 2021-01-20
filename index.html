@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <section class="p_prldr" id="p_prldr" style="display: none;">
+    <svg>
+        <filter id="gooey">
+            <feGaussianBlur in="SourceGrathic" stdDeviation="10"></feGaussianBlur>
+
+            <feColorMatrix values="
+                    1 0 0 0 0
+                    0 1 0 0 0
+                    0 0 1 0 0
+                    0 0 0 20 -10">
+            </feColorMatrix>
+        </filter>
+    </svg>
+    <div class="preloader">
+        <span class="svg" style="--i:1;"></span>
+        <span class="svg" style="--i:2;"></span>
+        <span class="svg" style="--i:3;"></span>
+        <span class="svg" style="--i:4;"></span>
+        <span class="svg" style="--i:5;"></span>
+        <span class="svg" style="--i:6;"></span>
+        <span class="svg" style="--i:7;"></span>
+        <span class="svg" style="--i:8;"></span>
+        <span class="rotate svg" style="--j:0;"></span>
+        <span class="rotate svg" style="--j:1;"></span>
+        <span class="rotate svg" style="--j:2;"></span>
+        <span class="rotate svg" style="--j:3;"></span>
+        <span class="rotate svg" style="--j:4;"></span>
+        <span class="rotate svg" style="--j:5;"></span>
+    </div>
+</section>
+<style type="text/css">
+  .p_prldr {
+ display:-webkit-box;
+ display:-ms-flexbox;
+ display:flex;
+ -webkit-box-pack:center;
+ -ms-flex-pack:center;
+ justify-content:center;
+ -webkit-box-align:center;
+ -ms-flex-align:center;
+ align-items:center;
+ min-height:100vh;
+ background-color:#0c1b21
+}
+#p_prldr {
+ position:fixed;
+ left:0;
+ top:0;
+ right:0;
+ bottom:0;
+ z-index:30
+}
+.preloader {
+ position:relative;
+ width:250px;
+ height:250px;
+ -webkit-filter:url(#gooey);
+ filter:url(#gooey);
+ -webkit-animation:animate 16s linear infinite;
+ animation:animate 16s linear infinite
+}
+.preloader span {
+ position:absolute;
+ top:0;
+ left:0;
+ width:100%;
+ height:100%;
+ display:block;
+ -webkit-transform:rotate(calc(45deg * var(--i)));
+ -ms-transform:rotate(calc(45deg * var(--i)));
+ transform:rotate(calc(45deg * var(--i)))
+}
+.preloader span::before {
+ content:"";
+ position:absolute;
+ top:0;
+ left:calc(50% - 20px);
+ width:40px;
+ height:40px;
+ background:-o-linear-gradient(45deg,#c7eeff,#03a9f4);
+ background:linear-gradient(45deg,#c7eeff,#03a9f4);
+ border-radius:50%;
+ -webkit-box-shadow:0 0 30px #00bcd4;
+ box-shadow:0 0 30px #00bcd4
+}
+.rotate {
+ -webkit-animation:animate 4s ease-in-out infinite;
+ animation:animate 4s ease-in-out infinite;
+ -webkit-animation-delay:calc(-.2s * var(--j));
+ animation-delay:calc(-.2s * var(--j))
+}
+@-webkit-keyframes animate {
+ 0% {
+  -webkit-transform:rotate(0);
+  transform:rotate(0)
+ }
+ 100% {
+  -webkit-transform:rotate(360deg);
+  transform:rotate(360deg)
+ }
+}
+@keyframes animate {
+ 0% {
+  -webkit-transform:rotate(0);
+  transform:rotate(0)
+ }
+ 100% {
+  -webkit-transform:rotate(360deg);
+  transform:rotate(360deg)
+ }
+}
+svg {
+ width:0;
+ height:0
+}
+</style>
+<script>
+  $(function(){
+  // preloader 
+    $(window).on('load', function () {
+        let $preloader = $('#p_prldr'),
+            $svg = $preloader.find('.svg');
+        $preloader.delay(1200).fadeOut('slow');
+      });      
+});
+</script>
+  <header class="header">
+
+  </header>
+
+  <main>
+    <section class="author">
+      <div class="container">
+        <div class="wrapper">
+          <div class="author-leftpart">
+            <div class="author-inner">
+              <div class="author-logo">
+                <img src="img/1x/author-logo.png">
+              </div>
+            <div class="author-leftpart__info">
+              <h1 class="author-leftpart__info-title">
+                Abstract <br> Logic
+              </h1>
+              <p class="author-leftpart__info-subtitle">Age: <span>28</span></p>
+              <p class="author-leftpart__info-subtitle">Country: <span>Russia</span></p>
+            </div>
+            </div>
+            <h2 class="author-experience line">Prof&nbsp;experience</h2>
+            <div class="author-details">
+              <div class="author-details__experience">
+                <p class="author-details__experience-info"> <a href="#!">2008 <span class="author-details__experience-company">OBS Studio</span></a></p>
+                <p class="author-details__experience-info"><a href="#!">2011 <span class="author-details__experience-company">Jpoint</span></a></p>
+                <p class="author-details__experience-info"><a href="#!">2013 <span class="author-details__experience-company">Inter Graf</span></a></p>
+                <p class="author-details__experience-info"><a href="#!">2016 <span class="author-details__experience-company">Klimo v Design</span></a></p>
+              </div>
+            <h2 class="author-experience line">My&nbsp;specialities</h2>
+            </div>
+          </div>
+
+          <div class="author-rightpart">
+            <h2 class="author-rightpart__title">RESUME</h2>
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

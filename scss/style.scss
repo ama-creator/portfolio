@@ -1,0 +1,156 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+@import "global";
+
+// section author start
+.author{
+
+    &-leftpart{
+        width: 50%;
+        display: block;
+        &__info{
+            margin-left: -5px;
+        }
+        &__info-title{
+            margin-left: 40px;
+            margin-bottom: 24.5px;
+            font-size: 39px;
+            line-height: 37px;
+            font-weight: bold;
+        }
+        &__info-subtitle{
+            margin-left: 20px;
+            margin-bottom: 0;
+            padding-left: 10px;
+            position: relative;
+            &:last-child{
+                margin-left: -10px;
+                margin-top: 14.5px;
+            }
+            & span{
+                padding-left: 8px;
+            }
+            &::before{
+                content: "";
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                top: -10px;
+                left: -4px;
+                background-color: transparent;
+                border: 1px solid #ED1C24;
+                border-radius: 50%;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                width: 3px;
+                height: 3px;
+                background-color: #fff;
+                border-radius: 50%;
+                left: 0.3px;
+                top: -5.5px;
+            }
+        }
+    }
+    &-inner{
+        display: flex;
+        align-items: center
+    }
+    &-logo{
+        height: 145px;
+        width: 145px;
+        border: 2px solid #6D6F71;
+        border-radius: 50%;
+        margin-top: -30px;
+        position: relative;
+        & img{
+            display: block;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            border: 8px solid #fff;
+            border-radius: 50%;
+            &:hover{
+            border: 3px solid #2525c8;
+            box-shadow: 6px 2px 30px 0px rgba(97, 10, 150, 0.75);
+            transition: all .7s;
+            }
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 23px;
+            background-color: #6D6F71;
+            left: 146px;
+            top: 101px;
+            transform: rotate(113deg);
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 21px;
+            background-color: #6D6F71;
+            left: 126px;
+            top: 127px;
+            transform: rotate(159deg);
+        }
+        &:hover{
+            border-color: #2525c8;
+            box-shadow: 6px 2px 30px 0px rgba(97, 10, 150, 0.75);
+            transition: all .6s;
+        }
+        &:hover::before, &:hover::after{
+            background-color: #2525c8;
+            box-shadow: 6px 2px 30px 0px rgba(97, 10, 150, 0.75);
+            transition: all .6s;
+        }
+    }
+    &-experience{
+        margin-top: 40px;
+        padding-bottom: 24px;
+        font-size: 26px;
+    }
+    &-details{
+        &__experience{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        &-info{
+            margin-right: 70px;
+            & a{
+                padding: 5px 6px;
+                border: 1px solid transparent;
+                border-radius: 5%;
+                // background-color: rgba(97, 10, 150, 0);
+                &:hover{
+                    color: #2525c8;                    
+                    border: 1px solid rgba(97, 10, 150, 0.40);
+                    background-color: rgba(97, 10, 150, 0.40);
+                    box-shadow: 0px 0px 3px 1px rgba(97, 10, 150, 0.75);
+                    transition: all .4s;
+                }
+            }
+        }
+        }
+        &-company{
+            margin-left: 11px;
+        }
+    }
+    &-rightpart{
+        width: 50%;
+        &__title{
+            text-align: center;
+            letter-spacing: 18px;
+        }
+    }
+}
+
+
+@import "media";
