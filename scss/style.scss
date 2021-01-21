@@ -146,8 +146,162 @@
     &-rightpart{
         width: 50%;
         &__title{
-            text-align: center;
+            text-align: right;
             letter-spacing: 18px;
+            font-size: 35px;
+            font-weight: 300;
+        }
+    }
+    &-wrapper{
+        display: block;
+        float: right;
+        width: 230px;
+        padding-right: 19px;
+        margin-top: 25px;
+    }
+    &-box{
+        display: flex;
+        justify-content: space-between;
+        &:nth-child(even){
+            justify-content: center;
+        }
+        &__letterS,
+        &__letterG{
+            padding: 0 45px;
+        }
+        &__letterI{
+            padding-right: 3px;
+        }
+        &--corner:nth-child(1){
+            width: 1px;
+            height: 24px;
+            margin-top: 20px;
+            transform: translateX(25px) rotate(140deg);
+            background-color: #fff;
+            position: relative;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                background-color: #fff;
+                top: -17px;
+                right: 35px;
+                border-radius: 50%
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                background-color: #fff;
+                top: -19px;
+                right: -43px;
+                border-radius: 50%
+            }
+        }
+        &--corner:nth-child(3){
+            width: 1px;
+            height: 24px;
+            margin-top: 20px;
+            transform: translateX(-25px) rotate(-140deg);
+            background-color: #fff;
+            position: relative;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                background-color: #fff;
+                top: -17px;
+                right: 35px;
+                border-radius: 50%
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                background-color: #fff;
+                top: -19px;
+                right: -43px;
+                border-radius: 50%
+            }
+        }
+        &--cornerDown:nth-child(1){
+            width: 1px;
+            height: 24px;
+            margin-top: 5px;
+            transform: translateX(25px) rotate(-320deg);
+            background-color: #fff;
+            position: relative;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                background-color: #fff;
+                top: -17px;
+                right: 35px;
+                border-radius: 50%
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                background-color: #fff;
+                top: -19px;
+                right: -43px;
+                border-radius: 50%
+            }
+        }
+        &--cornerDown:nth-child(3){
+            width: 1px;
+            height: 24px;
+            margin-top: 5px;
+            transform: translateX(-25px) rotate(320deg);
+            background-color: #fff;
+            position: relative;
+            &::before{
+                content: "";
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                background-color: #fff;
+                top: -17px;
+                right: 35px;
+                border-radius: 50%
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                width: 4px;
+                height: 4px;
+                background-color: #fff;
+                top: -19px;
+                right: -43px;
+                border-radius: 50%
+            }
+        }
+    }
+}
+
+.resume{
+    &-specialities{
+
+        &__box{
+            display: flex;
+            align-items: center;
+            &-rate{
+                width: 8px;
+                height: 8px;
+                margin-right: 8px;
+                background-color: #595A5C;
+            }
+            &-title{
+                margin-left: 20px
+            }
         }
     }
 }
