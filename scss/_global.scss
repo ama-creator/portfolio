@@ -120,6 +120,28 @@ a{
     animation-delay: 3.3s;
 }
 
+.resume-specialities__box-onelvl::before{
+    animation: grow-onelvl 2s forwards;
+    animation-delay: 4s;
+}
+.resume-specialities__box-twolvl::before{
+    animation: grow-twolvl 2s forwards;
+    animation-delay: 4.5s;
+}
+.resume-specialities__box-threelvl::before{
+    animation: grow-threelvl 2s forwards;
+    animation-delay: 5s;
+}
+.resume-specialities__box-fourlvl::before{
+    animation: grow-fourlvl 2s forwards;
+    animation-delay: 5.5s;
+}
+
+
+
+
+@keyframes grow{0%{width:0}100%{opacity:1;width:100%}}
+
 @keyframes plenum{
 0%{
     background-color: #595A5C; }
@@ -127,6 +149,9 @@ a{
         opacity:1;
         background-color: #fff;}
 }
+@keyframes grow-onelvl{0%{width:0}100%{opacity:1;width:40%;background-color: #fff;}}
+@keyframes grow-twolvl{0%{width:0}100%{opacity:1;width:35%;background-color: #fff;}}
+@keyframes grow-threelvl{0%{width:0}100%{opacity:1;width:60%;background-color: #fff;}}
+@keyframes grow-fourlvl{0%{width:0}100%{opacity:1;width:85%;background-color: #fff;}}
 
 
-@keyframes grow{0%{width:0}100%{opacity:1;width:100%}}

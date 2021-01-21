@@ -288,8 +288,13 @@
 }
 
 .resume{
+    &-wrapper{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
     &-specialities{
-
+        margin-right: 50px;
         &__box{
             display: flex;
             align-items: center;
@@ -302,8 +307,30 @@
             &-title{
                 margin-left: 20px
             }
+            &-onelvl,
+            &-twolvl,
+            &-threelvl,
+            &-fourlvl{
+                width: 262px;
+                height: 8px;
+                margin-right: 8px;
+                background-color: #595A5C;
+                position: relative;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 190px;
+                    height: 8px;
+                    left: 0;
+                    top: 0;
+                    bottom: 0;
+                }
+            }
         }
     }
+    // &--width{
+    //     width: 262px;
+    // }
 }
 
 
